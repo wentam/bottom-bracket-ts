@@ -11,9 +11,11 @@ module.exports = grammar({
       $.comment
     ),
 
+    _element_list: $ => repeat1($._element),
+
     parray: $ => seq(
       '[',
-      repeat($._element),
+       optional($._element_list),
       ']'
     ),
 
