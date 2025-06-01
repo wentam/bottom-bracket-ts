@@ -1,0 +1,2 @@
+(parray
+  open: "[") @form
