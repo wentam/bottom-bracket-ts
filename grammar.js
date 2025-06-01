@@ -11,14 +11,15 @@ module.exports = grammar({
       $.comment
     ),
 
+    // Barray: unquoted words (no whitespace or brackets)
+    barray: $ => token(prec(1, /[^\s\[\]";]+/)),
+
     parray: $ => seq(
       '[',
+      optional($.barray),
       repeat($._element),
       ']'
     ),
-
-    // Barray: unquoted words (no whitespace or brackets)
-    barray: $ => token(prec(1, /[^\s\[\]";]+/)),
 
     // Byte-string: quoted strings supporting \xFF and other escapes
     bytestring: $ => seq(
