@@ -18,7 +18,7 @@ module.exports = grammar({
     ),
 
     // Barray: unquoted words (no whitespace or brackets)
-    barray: $ => token(prec(1, /[^\s\[\]";]+/)),
+    barray: $ => prec(1, /[^\s\[\]";]+/),
 
     // Byte-string: quoted strings supporting \xFF and other escapes
     bytestring: $ => seq(
