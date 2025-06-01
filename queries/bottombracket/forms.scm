@@ -1,2 +1,3 @@
-(parray
-  open: "[") @form
+(parray) @form
+(barray) @form
+(bytestring) @form
