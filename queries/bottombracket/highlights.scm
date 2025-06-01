@@ -1,4 +1,4 @@
 (bytestring) @string
 (escape_sequence) @string.escape
-(barray) @Normal
+(barray) @constant
 (comment) @comment
